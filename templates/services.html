@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <h1 align="center">Restaurant Menu Page</h1>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home.html">Delicious Eats</a>
+    <a class="navbar-brand" href="/home.html"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/help.html">Help</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-3">
+    <h2 align="center">Our Services</h2>
+    <div class="row d-flex align-items-stretch">
+      <!-- Dine-In -->
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="card h-60 w-100">
+          <img src="/images/s1.jpg" class="card-img-top" alt="Dine-In">
+          <div class="card-body d-flex flex-column">
+            <h4>Dine-In</h4>
+            <p>Enjoy a comfortable dining experience with a welcoming ambiance.</p>
+            <p><strong>Available Chairs:</strong> 30</p>
+            <button class="btn btn-primary mt-auto" data-toggle="modal" data-target="#reserveModal">Reserve Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Takeout -->
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="card h-60 w-100">
+          <img src="/images/s2.jpg" class="card-img-top" alt="Takeout">
+          <div class="card-body d-flex flex-column">
+            <h4>Takeout</h4>
+            <p>Order your favorite meals to go and enjoy them at home.</p>
+            <button class="btn btn-primary mt-auto" data-toggle="modal" data-target="#orderModal">Order Now</button>
+          </div>
+        </div>
+      </div>
+      <!-- Catering -->
+      <div class="col-md-4 mb-4 d-flex">
+        <div class="card h-60 w-100">
+          <img src="/images/s3.jpg" class="card-img-top" alt="Catering">
+          <div class="card-body d-flex flex-column">
+            <h4>Catering</h4>
+            <p>We offer catering services for all types of events and celebrations.</p>
+            <button class="btn btn-primary mt-auto" data-toggle="modal" data-target="#cateringModal">Catering Available</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reserve Modal -->
+  <div class="modal fade" id="reserveModal" tabindex="-1" role="dialog" aria-labelledby="reserveModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form id="reserveForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reserveModalLabel">Reserve a Table</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="reserveName">Name</label>
+            <input type="text" class="form-control" id="reserveName" required>
+          </div>
+          <div class="form-group">
+            <label for="reserveEmail">Email</label>
+            <input type="email" class="form-control" id="reserveEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="reserveSeats">Number of Seats</label>
+            <input type="number" class="form-control" id="reserveSeats" min="1" max="30" required>
+          </div>
+          <div class="form-group">
+            <label for="reserveDate">Date</label>
+            <input type="date" class="form-control" id="reserveDate" required>
+          </div>
+          <div class="form-group">
+            <label for="reserveTime">Time</label>
+            <input type="time" class="form-control" id="reserveTime" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Reserve</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Order Modal -->
+  <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form id="orderForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="orderModalLabel">Order Takeout</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="orderName">Name</label>
+            <input type="text" class="form-control" id="orderName" required>
+          </div>
+          <div class="form-group">
+            <label for="orderEmail">Email</label>
+            <input type="email" class="form-control" id="orderEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="orderItem">Order Item</label>
+            <input type="text" class="form-control" id="orderItem" placeholder="Enter item name" required>
+          </div>
+          <div class="form-group">
+            <label for="orderQuantity">Quantity</label>
+            <input type="number" class="form-control" id="orderQuantity" min="1" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Catering Modal -->
+  <div class="modal fade" id="cateringModal" tabindex="-1" role="dialog" aria-labelledby="cateringModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <form id="cateringForm" class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cateringModalLabel">Catering Request</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label for="cateringName">Name</label>
+            <input type="text" class="form-control" id="cateringName" required>
+          </div>
+          <div class="form-group">
+            <label for="cateringEmail">Email</label>
+            <input type="email" class="form-control" id="cateringEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="cateringEvent">Event Details</label>
+            <textarea class="form-control" id="cateringEvent" rows="2" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="cateringDate">Date</label>
+            <input type="date" class="form-control" id="cateringDate" required>
+          </div>
+          <div class="form-group">
+            <label for="cateringGuests">Number of Guests</label>
+            <input type="number" class="form-control" id="cateringGuests" min="1" required>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Request Catering</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="successModalLabel">Success</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="successMessage">
+          Your request has been submitted!
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Reserve Form
+    document.getElementById('reserveForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch('/api/reserve', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          name: document.getElementById('reserveName').value,
+          email: document.getElementById('reserveEmail').value,
+          seats: document.getElementById('reserveSeats').value,
+          date: document.getElementById('reserveDate').value,
+          time: document.getElementById('reserveTime').value
+        })
+      }).then(res => {
+        $('#reserveModal').modal('hide');
+        document.getElementById('successMessage').innerText = 'Reservation successful!';
+        $('#successModal').modal('show');
+      });
+    });
+
+    // Order Form
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch('/api/order', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          name: document.getElementById('orderName').value,
+          email: document.getElementById('orderEmail').value,
+          item: document.getElementById('orderItem').value,
+          quantity: document.getElementById('orderQuantity').value
+        })
+      }).then(res => {
+        $('#orderModal').modal('hide');
+        document.getElementById('successMessage').innerText = 'Order placed successfully!';
+        $('#successModal').modal('show');
+      });
+    });
+
+    // Catering Form
+    document.getElementById('cateringForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      fetch('/api/catering', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          name: document.getElementById('cateringName').value,
+          email: document.getElementById('cateringEmail').value,
+          event: document.getElementById('cateringEvent').value,
+          date: document.getElementById('cateringDate').value,
+          guests: document.getElementById('cateringGuests').value
+        })
+      }).then(res => {
+        $('#cateringModal').modal('hide');
+        document.getElementById('successMessage').innerText = 'Catering request submitted!';
+        $('#successModal').modal('show');
+      });
+    });
+  </script>
+</body>
+</html>

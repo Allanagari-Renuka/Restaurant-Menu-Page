@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/index.css">
+  <style>
+    .menu-section {
+      scroll-margin-top: 100px;
+    }
+    .card-img-top {
+      height: 180px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <h1 align="center">Restaurant Menu Page</h1>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/home.html">Delicious Eats</a>
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/menu.html">Menu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/services.html">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/templates/help.html">Help</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Dropdown Navigation -->
+  <div class="container mt-4">
+    <div class="dropdown d-flex justify-content-center">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="menuDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" cursor="pointer">
+        Jump to Category
+      </button>
+      <div class="dropdown-menu" aria-labelledby="menuDropdown" cursor="pointer">
+        <a class="dropdown-item" href="/menu/appetizers.html">Appetizers</a>
+        <a class="dropdown-item" href="/menu/maincourse.html">Main Course</a>
+        <a class="dropdown-item" href="/menu/desserts.html">Desserts</a>
+        <a class="dropdown-item" href="/menu/drinks.html">Drinks</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 align="center" class="mt-4">Our Menu</h2>
+    <p align="center">Explore our diverse selection of appetizers, main courses, desserts and drinks.</p>
+    <div class="container mt-5">
+      <div class="row align-items-stretch">
+        <!-- Appetizers -->
+        <div class="col-md-6 col-lg-3 d-flex" cursor="pointer">
+          <div class="card mb-4 menu-section h-100 w-100" id="appetizers">
+            <img src="/images/m1.jpg" class="card-img-top" alt="Appetizers">
+            <div class="card-body">
+              <h5 class="card-title text-center">Appetizers</h5>
+              <ul>
+                <li>Spring Rolls</li>
+                <li>Garlic Bread</li>
+                <li>Bruschetta</li>
+                <li>Stuffed Mushrooms</li>
+                <li>Chicken Wings</li>
+                <li>Vegetable Tempura</li>
+                <li>Onion Rings</li>
+                <li>Caprese Salad</li>
+                <li>Nachos</li>
+                <li>Mini Samosas</li>
+                <li>Paneer Tikka</li>
+                <li>French Fries</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Main Courses -->
+        <div class="col-md-6 col-lg-3 d-flex" cursor="pointer">
+          <div class="card mb-4 menu-section h-100 w-100" id="maincourses">
+            <img src="/images/m2.jpg" class="card-img-top" alt="Main Courses">
+            <div class="card-body">
+              <h5 class="card-title text-center">Main Courses</h5>
+              <ul>
+                <li>Grilled Chicken</li>
+                <li>Pasta Primavera</li>
+                <li>Beef Steak</li>
+                <li>Grilled Salmon</li>
+                <li>Chicken Alfredo</li>
+                <li>Vegetable Stir Fry</li>
+                <li>Beef Tacos</li>
+                <li>Lamb Curry</li>
+                <li>Paneer Butter Masala</li>
+                <li>Margherita Pizza</li>
+                <li>Chicken Biryani</li>
+                <li>Fish & Chips</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Desserts -->
+        <div class="col-md-6 col-lg-3 d-flex" cursor="pointer">
+          <div class="card mb-4 menu-section h-100 w-100" id="desserts">
+            <img src="/images/m3.jpg" class="card-img-top" alt="Desserts">
+            <div class="card-body">
+              <h5 class="card-title text-center">Desserts</h5>
+              <ul>
+                <li>Cheesecake</li>
+                <li>Chocolate Mousse</li>
+                <li>Fruit Tart</li>
+                <li>Tiramisu</li>
+                <li>Apple Pie</li>
+                <li>Panna Cotta</li>
+                <li>Ice Cream</li>
+                <li>Brownie Sundae</li>
+                <li>Gulab Jamun</li>
+                <li>Baklava</li>
+                <li>Rasmalai</li>
+                <li>Donuts</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Drinks -->
+        <div class="col-md-6 col-lg-3 d-flex" cursor="pointer">
+          <div class="card mb-4 menu-section h-100 w-100" id="drinks">
+            <img src="/images/drink.jpg" class="card-img-top" alt="Drinks">
+            <div class="card-body">
+              <h5 class="card-title text-center">Drinks</h5>
+              <ul>
+                <li>Coke</li>
+                <li>Lemonade</li>
+                <li>Iced Tea</li>
+                <li>Mojito</li>
+                <li>Cappuccino</li>
+                <li>Orange Juice</li>
+                <li>Espresso</li>
+                <li>Green Tea</li>
+                <li>Milkshake</li>
+                <li>Mineral Water</li>
+                <li>Cold Coffee</li>
+                <li>Hot Chocolate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Smooth scroll for anchor links -->
+  <script>
+    document.querySelectorAll('.dropdown-item').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+
+  <script>
+    // Smooth scroll on page load if URL has hash
+    window.addEventListener('load', () => {
+      const hash = window.location.hash;
+      if (hash) {
+        const target = document.querySelector(hash);
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="/menu.js"></script>
+</body>
+</html>

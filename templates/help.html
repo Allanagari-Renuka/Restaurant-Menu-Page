@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Help</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <h1 align="center">Restaurant Menu Page</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/home.html">Delicious Eats</a>
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="/home.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="/templates/about.html">About Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="/templates/menu.html">Menu</a></li>
+      <li class="nav-item"><a class="nav-link" href="/templates/services.html">Services</a></li>
+      <li class="nav-item"><a class="nav-link" href="/templates/contact.html">Contact Us</a></li>
+      <li class="nav-item"><a class="nav-link" href="/templates/help.html">Help</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="container mt-5">
+        <h2 align="center">Help & Support</h2>
+        <p align="center">Find answers to frequently asked questions, or get in touch with our support team.</p>
+        
+        <!-- FAQ Section -->
+        <h3>Frequently Asked Questions</h3>
+        <div class="accordion" id="faqAccordion">
+            <div class="card">
+                <div class="card-header" id="faq1">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            How can I make a reservation?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="faq1" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        You can make a reservation by calling us directly or by using the online reservation form on our Contact page.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="faq2">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Do you offer catering services?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="faq2" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        Yes, we offer catering services for various events. Please see our Services page for more details or contact us directly.
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="faq3">
+                    <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What is your cancellation policy?
+                        </button>
+                    </h5>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="faq3" data-parent="#faqAccordion">
+                    <div class="card-body">
+                        We allow free cancellations up to 24 hours before the reservation time. For more details, please contact us.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Support Section -->
+        <h3 class="mt-5">Need More Help?</h3>
+        <p>If your question isn’t answered above, please reach out to our support team.</p>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <h5>Email Support</h5>
+                <p>Email us at <a href="mailto:support@restaurant.com">support@restaurant.com</a> and our team will get back to you as soon as possible.</p>
+            </div>
+            <div class="col-md-6">
+                <h5>Message Support</h5>
+                <p>Message us at <a href="tel:+1234567890">@08518-22333</a> during business hours for immediate assistance.</p>
+            </div>
+        </div>
+
+        <!-- Feedback Form -->
+         
+        <h3 class="mt-5">Feedback</h3>
+<p>We value your feedback. Please let us know how we can improve our service.</p>
+<div id="feedbackStatus" class="text-center mb-3"></div>
+<form id="feedbackForm">
+  <div class="form-group">
+      <label for="feedbackName">Name</label>
+      <input type="text" class="form-control" id="feedbackName" placeholder="Your Name" required>
+  </div>
+  <div class="form-group">
+      <label for="feedbackEmail">Email</label>
+      <input type="email" class="form-control" id="feedbackEmail" placeholder="Your Email" required>
+  </div>
+  <div class="form-group">
+      <label for="feedbackMessage">Message</label>
+      <textarea class="form-control" id="feedbackMessage" rows="4" placeholder="Your Feedback" required></textarea>
+  </div>
+  <div class="text-center">
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+<script>
+document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  fetch('/api/feedback', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({
+      name: document.getElementById('feedbackName').value,
+      email: document.getElementById('feedbackEmail').value,
+      message: document.getElementById('feedbackMessage').value
+    })
+  })
+  .then(() => {
+    document.getElementById('feedbackStatus').innerHTML =
+      `<div class="alert alert-success" role="alert">Thank you for your feedback! Message sent successfully.</div>`;
+    document.getElementById('feedbackForm').reset();
+  });
+});
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/menu.js"></script>
+</body>
+</html>
